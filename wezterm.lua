@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.initial_cols = 80
+config.initial_cols = 100
 config.initial_rows = 25
 config.font = wezterm.font("FiraCode Nerd Font Mono")
 config.font_size = 14
@@ -19,6 +19,46 @@ config.keys = {
 		key = "-",
 		mods = "ALT|CTRL",
 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "LeftArrow",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.AdjustPaneSize({ "Left", 1 }),
+	},
+	{
+		key = "LeftArrow",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "RightArrow",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.AdjustPaneSize({ "Right", 1 }),
+	},
+	{
+		key = "RightArrow",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "UpArrow",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.AdjustPaneSize({ "Up", 1 }),
+	},
+	{
+		key = "UpArrow",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "DownArrow",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.AdjustPaneSize({ "Down", 1 }),
+	},
+	{
+		key = "DownArrow",
+		mods = "CTRL",
+		action = wezterm.action.ActivatePaneDirection("Down"),
 	},
 }
 
