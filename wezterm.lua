@@ -6,6 +6,7 @@ config.initial_rows = 25
 config.font = wezterm.font("FiraCode Nerd Font Mono")
 config.font_size = 14
 config.color_scheme = "GruvboxDarkHard"
+config.hide_tab_bar_if_only_one_tab = true
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to
