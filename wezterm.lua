@@ -1,11 +1,15 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+config.front_end = "OpenGL"
+config.font = wezterm.font("FiraCode Nerd Font Mono")
+config.dpi = 96.0
 config.initial_cols = 100
 config.initial_rows = 30
-config.font = wezterm.font("FiraCode Nerd Font Mono")
 config.font_size = 12
 config.color_scheme = "GruvboxDarkHard"
+config.window_decorations = "RESIZE" -- Removes title bar/buttons
+config.use_fancy_tab_bar = false -- Uses a simpler, faster tab bar
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
 	left = 4,
